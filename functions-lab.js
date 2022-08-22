@@ -412,22 +412,16 @@ function Hello() {
   
   //CODE HERE
   
-  // function ascendingOrder (numbers){
-  //   ascCheck = true
-  //   for (i = 0; i < numbers.length; i++){ 
-  //     if (numbers[i] >= numbers[i+1]){
-  //       ascCheck = false
-  //     }
-  //   }
-  //   if (ascCheck === true){
-  //     return true
-  //   } else{
-  //     return false
-  //   }
-  // }
-  
-  // let arrayIsAscending = ascendingOrder(sampleArray)
-  // console.log(arrayIsAscending)
+  const arrayIsAscending = function(numbers){
+    for (i = 0; i < numbers.length; i++){ 
+      if (numbers[i] >= numbers[i+1]){
+        return false
+      }
+    }
+    return true
+  }
+
+  console.log(arrayIsAscending)
   
   ////////////////// PROBLEM 22 ////////////////////
   
