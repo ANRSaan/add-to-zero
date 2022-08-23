@@ -78,17 +78,11 @@ function Hello() {
   */
   
   //CODE HERE
-  // const compareNums = (num1, num2) => {
-  //     if (num1 > num2){
-  //       return console.log(num1)
-  //     } else if (num2 > num1){
-  //       return console.log(num2)
-  //     } else {
-  //       return console.log(num1)
-  //     }
-  // }
+  const compareNums = (num1, num2) => {
+        return (num2 > num1) ? num2 : num1;
+      }
   
-  // compareNums (3, 71321)
+// console.log(compareNums(123123, 3))
   
   ////////////////// PROBLEM 6 ////////////////////
   /*
@@ -178,15 +172,11 @@ function Hello() {
   */
   
   //CODE HERE
-  // function nameCheck (name) {
-  //   if (name === "Steven") {
-  //     return 'What is up Steven?'
-  //   } else if (name === "Bryan") {
-  //     return 'Hey Bryan!'
-  //   } else {
-  //     return `Cool name, ${name}`
-  //   }
-  // }
+  function nameCheck (name) {
+    return (name === "Steven") ? 'What is up Steven?'
+        : (name === "Bryan") ? 'Hey Bryan!'
+        :`Cool name, ${name}`
+  }
   
   // nameGreeting = nameCheck("Flarpisty")
   
@@ -205,15 +195,10 @@ function Hello() {
   //CODE HERE
   
   function faveColorFinder(color){
-    if (color === "red"){
-      return 'red is a great color'
-    } else if (color == "green"){
-      return 'green is a solid favorite color'
-    } else if (color === "black"){
-      return 'so trendy'
-    } else {
-      return 'you need to evaluate your favorite color choice'
-    }
+    return (color === "red") ? 'red is a great color'
+        : (color == "green") ? 'green is a solid favorite color'
+        : (color === "black") ? 'so trendy'
+        : 'you need to evaluate your favorite color choice'
   }
   
   let colorRating = faveColorFinder('blue')
@@ -248,11 +233,7 @@ function Hello() {
   //CODE HERE
   
   function thatsOdd(number){
-    if (number % 2 === 0){
-      return 'That\'s not odd!'
-    } else {
-      return 'That is odd indeed!'
-    }
+    return (number % 2 === 0) ? 'That\'s not odd!' : 'That is odd indeed!'
   }
   
   let oddChecker = thatsOdd(51)
@@ -355,21 +336,10 @@ function Hello() {
   */
   tester = "     blargoblarggmail.com"
   function emailCheck (email){
-    email = String(email)
-    email = email.trim()
-    atSymbol = false
-    for (i = 0; i < email.length; i++) {
-      if (email[i] === "@"){
-        atSymbol = true
-      }
-    }
-    if (atSymbol === true){
-      return "email verified"
-    } else {
-      return "must provide valid email address"
-    }
+    email = String(email).trim()
+    return (email.includes("@")) ? 'email verified' : "must provide a valid email address";
   }
-  // console.log(emailCheck(tester))
+// console.log(emailCheck(tester))
   
   ////////////////// PROBLEM 19 ////////////////////
   /*
@@ -379,14 +349,11 @@ function Hello() {
   
   //CODE HERE
   
-  function frogGetter (gold){
-    let frogCost = 3
-    let remainder = gold % 3
-    
-    return (gold - remainder) / frogCost
+  function frogGetter (gold, frogCost = 3){
+    return Math.floor(gold / frogCost)
   }
   
-  // console.log(frogGetter(19))
+// console.log(frogGetter(19))
   
   ////////////////// PROBLEM 20 ////////////////////
   /*
@@ -396,11 +363,8 @@ function Hello() {
   //CODE HERE
   
   
-  function frogGetter (gold){
-    let frogCost = 3
-    let remainder = gold % 3
-    
-    return (gold - remainder) / frogCost
+  function frogGetter (gold, frogCost = 3){
+    return Math.floor(gold / frogCost)
   }
   totalFrogs2 = frogGetter(19)
   
@@ -414,14 +378,14 @@ function Hello() {
   
   const arrayIsAscending = function(numbers){
     for (i = 0; i < numbers.length; i++){ 
-      if (numbers[i] >= numbers[i+1]){
+      if (numbers[i] > numbers[i+1]){
         return false
       }
     }
     return true
   }
 
-  console.log(arrayIsAscending)
+//   console.log(arrayIsAscending(sampleArray))
   
   ////////////////// PROBLEM 22 ////////////////////
   
